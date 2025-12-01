@@ -1,0 +1,3 @@
+redis 
+sentence-transformers 
+scikit-learn
