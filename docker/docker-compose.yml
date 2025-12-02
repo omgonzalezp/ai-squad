@@ -1,9 +1,9 @@
 version: '3.8'
 
 services:
-  postgres:
+  postgres_ia_squad:
     image: postgres:15-alpine
-    container_name: postgres
+    container_name: postgres_ia_squad
     environment:
       POSTGRES_USER: ${POSTGRES_USER:-postgres}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
@@ -14,9 +14,9 @@ services:
       - postgres_data:/var/lib/postgresql/data
     restart: unless-stopped
 
-  redis:
+  redis_ia_squad:
     image: redis:7-alpine
-    container_name: redis
+    container_name: redis_ia_squad
     ports:
       - "${REDIS_PORT:-6379}:6379"
     volumes:
